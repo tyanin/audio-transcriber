@@ -19,13 +19,13 @@ A Python tool to transcribe MP3 audio files to text with speaker diarization.
 
 ## Installation
 
-1. Clone this repository:
+1. Clone repo:
    ```
    git clone https://github.com/yourusername/audio-transcriber.git
    cd audio-transcriber
    ```
 
-2. Create a virtual environment and activate it:
+2. Create virtual environment/activate it:
    ```
    python -m venv venv
    
@@ -67,7 +67,7 @@ set OPENAI_API_KEY=your-api-key-here
 export OPENAI_API_KEY=your-api-key-here
 ```
 
-Then simply run:
+Then run:
 ```
 python transcriber.py path/to/your/audiofile.mp3 -o output_transcript.txt
 ```
@@ -83,10 +83,22 @@ python transcriber.py path/to/your/audiofile.mp3 -o output_transcript.txt
 
 This implementation uses a simple heuristic to detect speaker changes based on pauses in speech. If there's a significant pause (>1 second), it assumes a different person is speaking.
 
-For more advanced speaker diarization, you may want to explore:
-- Using a dedicated diarization library
-- Using a service with more advanced speaker recognition
-- Training a custom model to identify speakers
+## Goal Output (still in progress)
+```
+Speaker 1: Hello everyone, welcome to today's meeting about the quarterly results.
+
+Speaker 2: Thanks for having us. I'm excited to share the data from Q3.
+
+Speaker 1: Before we dive in, did everyone receive the slide deck I sent yesterday?
+
+Speaker 2: Yes, I've reviewed it and have a few questions about the marketing spend on page 12.
+
+Speaker 1: Great point. The increase in marketing was due to our new product launch in August.
+
+Speaker 2: That makes sense. I see the ROI numbers are quite strong compared to previous campaigns.
+
+Speaker 1: Exactly. We're seeing a 24% improvement in conversion rates across all channels.
+```
 
 ## Future Improvements
 
